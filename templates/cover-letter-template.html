@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="{{LANG}}">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>{{NAME}} — Cover Letter</title>
+<style>
+  @page {
+    size: Letter;
+    margin: 0.70in 0.75in 0.68in 0.75in;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 10pt;
+    line-height: 1.14;
+    color: #000;
+    background: #fff;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+
+  .header {
+    text-align: center;
+    margin-bottom: 11pt;
+  }
+
+  .header-name {
+    font-size: 18pt;
+    font-weight: 700;
+    line-height: 1.05;
+    margin-bottom: 5pt;
+  }
+
+  .contact-line {
+    font-size: 10pt;
+    line-height: 1.35;
+  }
+
+  .bsep {
+    margin: 0 5pt;
+  }
+
+  .header-rule {
+    border: none;
+    border-top: 1px solid #000;
+    margin: 0 0 14pt 0;
+  }
+
+  .date-line {
+    margin-bottom: 14pt;
+    font-size: 10pt;
+    line-height: 1.35;
+  }
+
+  .recipient-block {
+    margin-bottom: 14pt;
+    font-size: 10pt;
+    line-height: 1.35;
+  }
+
+  .subject-line {
+    font-weight: 700;
+    font-size: 10pt;
+    line-height: 1.35;
+    margin-bottom: 14pt;
+  }
+
+  .salutation {
+    margin-bottom: 14pt;
+    font-size: 10pt;
+    line-height: 1.35;
+  }
+
+  .body-paragraphs p {
+    font-size: 10pt;
+    margin-bottom: 12pt;
+    line-height: 1.35;
+  }
+
+  .body-paragraphs ul {
+    margin: 0 0 12pt 24pt;
+    padding: 0;
+    list-style-position: outside;
+  }
+
+  .body-paragraphs li {
+    font-size: 10pt;
+    line-height: 1.35;
+    margin-bottom: 4pt;
+  }
+
+  .body-paragraphs li::marker {
+    font-family: "Times New Roman", Times, serif;
+    font-size: 10pt;
+  }
+
+  .closing {
+    margin-top: 14pt;
+  }
+
+  .sign-off {
+    font-size: 10pt;
+    line-height: 1.35;
+    margin-bottom: 18pt;
+  }
+
+  .sig-name {
+    font-size: 10pt;
+    font-weight: 700;
+    line-height: 1.35;
+  }
+
+  strong,
+  b {
+    font-weight: 700;
+  }
+
+  @media screen {
+    body {
+      width: {{PAGE_WIDTH}};
+      min-height: 11in;
+      margin: 0 auto;
+      padding: 0.70in 0.75in 0.68in 0.75in;
+      box-shadow: 0 0 0 1px #ddd;
+    }
+  }
+
+  @media print {
+    body {
+      padding: 0;
+    }
+  }
+</style>
+</head>
+<body>
+
+<div class="header">
+  <div class="header-name">{{NAME}}</div>
+
+  <div class="contact-line">
+    {{LOCATION}}<span class="bsep">●</span>
+    <a href="mailto:{{EMAIL}}">{{EMAIL}}</a><span class="bsep">●</span>
+    {{PHONE}}
+  </div>
+
+  <div class="contact-line">
+    <a href="https://{{LINKEDIN_DISPLAY}}">{{LINKEDIN_DISPLAY}}</a><span class="bsep">●</span>
+    <a href="https://{{PORTFOLIO_DISPLAY}}">{{PORTFOLIO_DISPLAY}}</a><span class="bsep">●</span>
+    <a href="https://{{GITHUB_DISPLAY}}">{{GITHUB_DISPLAY}}</a>
+  </div>
+</div>
+
+<hr class="header-rule">
+
+<div class="date-line">{{DATE}}</div>
+
+<div class="recipient-block">
+  <strong>{{HIRING_MANAGER}}</strong><br>
+  {{RECIPIENT_TITLE_LINE}}
+  {{COMPANY}}<br>
+  {{COMPANY_ADDRESS}}
+</div>
+
+<div class="subject-line">Subject: Application for {{JOB_TITLE}}{{JOB_REF}}</div>
+
+<div class="salutation">Dear {{SALUTATION}},</div>
+
+<div class="body-paragraphs">
+{{BODY}}
+</div>
+
+<div class="closing">
+  <div class="sign-off">Sincerely,</div>
+  <div class="sig-name">{{NAME}}</div>
+</div>
+
+</body>
+</html>
